@@ -1,7 +1,13 @@
 ---
 name: Coq Proofs
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - '**/*.v'
+  pull_request:
+    paths:
+      - '**/*.v'
 
 jobs:
   build:
