@@ -1,0 +1,20 @@
+---
+name: Coq Proofs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Coq
+      run: sudo apt-get install -y coq
+    - name: Compile and Verify Coq Files
+      run: |
+        for file in *.v; do
+          echo "Compiling $file"
+          coqc $file
+        done
+
