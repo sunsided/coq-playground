@@ -1,4 +1,4 @@
-# Coq Playground
+# 🐓 Coq Playground
 
 Toying around with [The Coq Proof Assistant].
 
